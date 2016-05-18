@@ -6,7 +6,7 @@ description: Put together all of the Apollo GraphQL tools to create an HTTP serv
 
 While `apolloServer` can be used as an express middleware, graphql-tools exports all the functions that `apolloServer` uses internally, so they can be used separately with any GraphQL-JS schema. This section documents all the functions that graphql-tools exports, and explains how they can be used.
 
-<h3 id="apolloServer" title="apolloServer">apolloServer(schema, [...])</h3>
+<h2 id="apolloServer" title="apolloServer">apolloServer(schema, [...])</h2>
 
 `apolloServer` is a convenient function that generates an express middleware (it uses express-graphql under the hood). It combines all of the tools in graphql-tools and has a simple to use interface:
 
@@ -133,7 +133,7 @@ If `allowUndefinedInResolve` is set to `false`, `apolloServer` will throw an Err
 
 If execution should not continue, resolve functions should return `null` and not `undefined`.
 
-<h3 id="corsSupport" title="cors support">CORS support</h3>
+<h2 id="corsSupport" title="cors support">CORS support</h2>
 
 An issue was discovered re: CORS when using the apolloClient to connect to an apolloServer running on a different instance. 
 To account for this CORS support must be configured in the express app. [CORS](https://github.com/expressjs/cors) is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options. 
